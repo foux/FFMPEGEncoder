@@ -9,7 +9,6 @@ import shutil
 import string
 
 def which(program):
-    import os
     def is_exe(fpath):
         return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
 
