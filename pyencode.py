@@ -39,7 +39,6 @@ def treat_file(video_file):
         pipe = subprocess.Popen([which("ffprobe"),'-show_streams','-of','compact',video_file],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         out = pipe.communicate()[0]
         if out:
-            logging.warning("Found video file %s" % video_file)
             streams = out.rstrip().split('\n')
             command = {
                 'commands': [],
